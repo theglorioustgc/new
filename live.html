@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live — The Glorious Church</title>
+<meta name="description" content="Join The Glorious Church live via audio or video stream.">
+
+<link rel="stylesheet" href="shared/theme.css">
+<link rel="stylesheet" href="header/header.css">
+<link rel="stylesheet" href="live/live.css">
+<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<div id="live-placeholder"></div>
+<div id="footer-placeholder"></div>
+
+<script src="shared/page-loader.js"></script>
+<script src="shared/smooth-scroll.js"></script>
+<script src="shared/clipboard.js"></script>
+<script src="header/header.js"></script>
+<script src="live/live.js"></script>
+<script src="footer/footer.js"></script>
+
+<script>
+  tgcLoadPartials([
+    { id: 'header-placeholder', path: 'header/header.html' },
+    { id: 'live-placeholder', path: 'live/live.html' },
+    { id: 'footer-placeholder', path: 'footer/footer.html' }
+  ]).then(() => {
+    tgcInitHeader();
+    tgcInitFooter();
+  });
+</script>
+
+</body>
+</html>

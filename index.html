@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Glorious Church — Home</title>
+<meta name="description" content="The Glorious Church: a Christ-centered community devoted to worship, the Word, and walking together in faith.">
+
+
+<link rel="stylesheet" href="shared/theme.css">
+
+
+<link rel="stylesheet" href="header/header.css">
+<link rel="stylesheet" href="hero/hero.css">
+<link rel="stylesheet" href="today-service/today-service.css">
+<link rel="stylesheet" href="weekly-schedule/weekly-schedule.css">
+<link rel="stylesheet" href="devotional/devotional.css">
+<link rel="stylesheet" href="testimonies/testimonies.css">
+<link rel="stylesheet" href="leaders/leaders.css">
+<link rel="stylesheet" href="gallery/gallery.css">
+<link rel="stylesheet" href="donation/donation.css">
+<link rel="stylesheet" href="partnership/partnership.css">
+<link rel="stylesheet" href="tgc-man/tgc-man.css">
+<link rel="stylesheet" href="footer/footer.css">
+
+<!-- Font Awesome (social icons in footer) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- Placeholders filled by page-loader.js via fetch() -->
+<div id="header-placeholder"></div>
+
+<main>
+  <div id="hero-placeholder"></div>
+  <div id="today-service-placeholder"></div>
+  <div id="weekly-schedule-placeholder"></div>
+  <div id="devotional-placeholder"></div>
+  <div id="leaders-placeholder"></div>
+  <div id="gallery-placeholder"></div>
+  <div id="donation-placeholder"></div>
+  <div id="partnership-placeholder"></div>
+  <div id="tgc-man-placeholder"></div>
+
+  <!-- Contact CTA — EDIT: copy below -->
+  <section class="tgc-contact-cta">
+    <div class="section-container tgc-contact-cta__inner">
+      <h2>We'd Love to Hear From You</h2>
+      <p>Have a question, prayer request, or want to learn more? Reach out. We're one message away.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<!-- Inline styles for the Contact CTA, kept minimal since it's not a full component folder -->
+<style>
+  .tgc-contact-cta { background: var(--color-cream); text-align: center; }
+  .tgc-contact-cta__inner { max-width: 600px; }
+  .tgc-contact-cta p { color: var(--color-ink-soft); margin-bottom: var(--space-md); }
+</style>
+
+<!-- Shared utilities -->
+<script src="shared/page-loader.js"></script>
+<script src="shared/smooth-scroll.js"></script>
+<script src="shared/clipboard.js"></script>
+
+<!-- Per-section behavior scripts -->
+<script src="header/header.js"></script>
+<script src="hero/hero.js"></script>
+<script src="today-service/today-service.js"></script>
+<script src="devotional/devotional.js"></script>
+<script src="tstimonies/testimonies.js"></script>
+<script src="leaders/leaders.js"></script>
+<script src="gallery/gallery.js"></script>
+<script src="donation/donation.js"></script>
+<script src="partnership/partnership.js"></script>
+<script src="tgc-man/tgc-man.js"></script>
+<script src="footer/footer.js"></script>
+
+<script>
+  // Load every section partial, then re-run header/footer init scripts
+  // (their elements only exist in the DOM once fetch() inserts them).
+  tgcLoadPartials([
+    { id: 'header-placeholder', path: 'header/header.html' },
+    { id: 'hero-placeholder', path: 'hero/hero.html' },
+    { id: 'today-service-placeholder', path: 'today-service/today-service.html' },
+    { id: 'weekly-schedule-placeholder', path: 'weekly-schedule/weekly-schedule.html' },
+    { id: 'devotional-placeholder', path: 'devotional/devotional.html' },
+    { id: 'leaders-placeholder', path: 'leaders/leaders.html' },
+    { id: 'gallery-placeholder', path: 'gallery/gallery-partial.html' },
+    { id: 'donation-placeholder', path: 'donation/donation.html' },
+    { id: 'partnership-placeholder', path: 'partnership/partnership.html' },
+    { id: 'tgc-man-placeholder', path: 'tgc-man/tgc-man.html' },
+    { id: 'footer-placeholder', path: 'footer/footer.html' }
+  ]).then(() => {
+    tgcInitHeader();
+    tgcInitFooter();
+    // Re-trigger hash scroll now that sections exist in the DOM
+    if (window.location.hash) {
+      const el = document.getElementById(window.location.hash.substring(1));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
+
+</body>
+</html>

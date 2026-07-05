@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — The Glorious Church</title>
+
+<link rel="stylesheet" href="shared/theme.css">
+<link rel="stylesheet" href="header/header.css">
+<link rel="stylesheet" href="gallery/gallery-full.css">
+<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main class="tgc-gallery-full">
+  <div class="section-container">
+    <div class="tgc-section-heading">
+      <span class="eyebrow">Gallery</span>
+      <h1>Moments of Glory</h1>
+      <div class="gradient-divider"></div>
+    </div>
+
+    <div class="tgc-gallery__grid">
+      <img src="assets/images/gallery/gallery-1.jpg" alt="The Glorious Church gallery photo 1" class="tgc-gallery__img">
+      <img src="assets/images/gallery/gallery-2.jpg" alt="The Glorious Church gallery photo 2" class="tgc-gallery__img">
+      <img src="assets/images/gallery/gallery-3.jpg" alt="The Glorious Church gallery photo 3" class="tgc-gallery__img">
+      <img src="assets/images/gallery/gallery-4.jpg" alt="The Glorious Church gallery photo 4" class="tgc-gallery__img">
+      <img src="https://raw.githubusercontent.com/theglorioustgc/pictures/refs/heads/main/5931329619824938444.jpg" alt="The Glorious Church gallery photo 5" class="tgc-gallery__img">
+      <img src="https://raw.githubusercontent.com/theglorioustgc/pictures/refs/heads/main/5931329619824938445.jpg" alt="The Glorious Church gallery photo 6" class="tgc-gallery__img">
+      <img src="https://raw.githubusercontent.com/theglorioustgc/pictures/refs/heads/main/5931329619824938446.jpg" alt="The Glorious Church gallery photo 7" class="tgc-gallery__img">
+      <img src="https://raw.githubusercontent.com/theglorioustgc/pictures/refs/heads/main/5931329619824938448.jpg" alt="The Glorious Church gallery photo 8" class="tgc-gallery__img">
+    </div>
+
+    <div style="text-align:center; margin-top: var(--space-lg);">
+      <a href="index.html" class="btn btn-outline">Back to Home</a>
+    </div>
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="shared/page-loader.js"></script>
+<script src="shared/smooth-scroll.js"></script>
+<script src="header/header.js"></script>
+<script src="footer/footer.js"></script>
+
+<script>
+  tgcLoadPartials([
+    { id: 'header-placeholder', path: 'header/header.html' },
+    { id: 'footer-placeholder', path: 'footer/footer.html' }
+  ]).then(() => {
+    tgcInitHeader();
+    tgcInitFooter();
+  });
+</script>
+
+</body>
+</html>

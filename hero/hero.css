@@ -1,0 +1,71 @@
+/* ==========================================================================
+   HERO STYLES
+   ========================================================================== */
+
+.tgc-hero {
+  background: var(--gradient-purple);
+  color: var(--color-cream);
+  text-align: center;
+  padding: var(--space-xl) var(--space-md) calc(var(--space-xl) * 1.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tgc-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 60%);
+  pointer-events: none;
+}
+
+.tgc-hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* EDIT: hero logo size */
+.tgc-hero__logo {
+  height: 100px;
+  width: 115px;            /* equal to max-height so it's a perfect circle */
+  object-fit: cover;       /* was contain — cover fills the circle without distortion */
+  border-radius: 25%;
+  margin: 0 auto var(--space-sm);
+}
+
+.tgc-hero__name {
+  font-family: var(--font-display);
+  color: var(--color-white);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: 0.03em;
+}
+
+.tgc-hero__tagline {
+  font-family: var(--font-heading);
+  color: var(--color-gold);
+  font-size: 1.25rem;
+  margin: 0.25rem 0 1.25rem;
+}
+
+.tgc-hero__description {
+  color: rgba(250,246,236,0.88);
+  font-size: 1.02rem;
+  max-width: 600px;
+  margin: 0 auto var(--space-md);
+}
+
+.tgc-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
+
+.tgc-hero .btn-outline {
+  color: var(--color-cream);
+  border-color: var(--color-gold);
+}
+
+.tgc-hero .btn-outline:hover { color: var(--color-purple-deep); }

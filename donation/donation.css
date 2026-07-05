@@ -1,0 +1,77 @@
+/* ==========================================================================
+   "YOUR SEED, YOUR HARVEST" BANNER + DONATION STYLES
+   ========================================================================== */
+
+.tgc-seed-banner {
+  background: var(--gradient-gold-purple);
+  text-align: center;
+}
+
+.tgc-seed-banner__inner { padding: var(--space-lg) var(--space-md); }
+
+.tgc-seed-banner__heading {
+  color: var(--color-white);
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+}
+
+.tgc-seed-banner__line {
+  color: rgba(255,255,255,0.92);
+  margin-bottom: var(--space-md);
+}
+
+.tgc-seed-banner .btn-primary {
+  background: var(--color-white);
+  color: var(--color-purple-deep);
+}
+
+.tgc-donation { background: var(--color-cream); }
+
+.tgc-donation__card {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.tgc-donation__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(75,0,130,0.1);
+}
+
+.tgc-donation__row:last-child { border-bottom: none; }
+
+.tgc-donation__label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-deep);
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+}
+
+.tgc-donation__value {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-purple-deep);
+  margin: 0;
+}
+
+.tgc-copy-btn {
+  flex-shrink: 0;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+}
+
+.tgc-copy-btn.copied {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-purple-deep);
+}
+
+@media (max-width: 480px) {
+  .tgc-donation__card { padding: var(--space-md); }
+  .tgc-donation__row { flex-wrap: wrap; }
+}

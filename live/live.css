@@ -1,0 +1,47 @@
+/* ==========================================================================
+   LIVE PAGE STYLES
+   ========================================================================== */
+
+.tgc-live-page { background: var(--color-cream); min-height: 60vh; }
+
+.tgc-live-page__inner { text-align: center; max-width: 720px; }
+
+.tgc-live-page__intro { color: var(--color-ink-soft); margin-bottom: var(--space-lg); }
+
+.tgc-live-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.tgc-live-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.tgc-live-card__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--gradient-gold-purple);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tgc-live-card__icon svg { width: 30px; height: 30px; }
+
+.tgc-live-card__label {
+  font-family: var(--font-heading);
+  color: var(--color-purple-deep);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 600px) {
+  .tgc-live-cards { grid-template-columns: 1fr; }
+}

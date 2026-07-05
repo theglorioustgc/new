@@ -1,0 +1,161 @@
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */
+
+.tgc-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-purple-deep);
+  box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+}
+
+.tgc-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.85rem var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tgc-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* EDIT: change max-height to resize logo across the whole site */
+.tgc-header__logo {
+  height: 45px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.tgc-header__name {
+  font-family: var(--font-display);
+  color: var(--color-white);
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.tgc-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* ---- LIVE button + pulsing dot ----------------------------------------- */
+.tgc-live-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--color-purple);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(212,175,55,0.5);
+  transition: background 0.2s ease;
+}
+
+.tgc-live-btn:hover { background: var(--color-purple-light); }
+
+.tgc-live-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-red-live);
+  animation: tgc-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes tgc-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(224, 38, 59, 0.65); }
+  70%  { box-shadow: 0 0 0 8px rgba(224, 38, 59, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 38, 59, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tgc-live-dot { animation: none; }
+}
+
+/* ---- Hamburger ----------------------------------------------------------*/
+.tgc-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tgc-hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--color-gold);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.tgc-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.tgc-hamburger.is-open span:nth-child(2) { opacity: 0; }
+.tgc-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---- Slide-in nav menu --------------------------------------------------*/
+.tgc-nav-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(320px, 85vw);
+  background: var(--gradient-purple);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 1100;
+  padding: 6rem 2rem 2rem;
+  overflow-y: auto;
+}
+
+.tgc-nav-menu.is-open { transform: translateX(0); }
+
+.tgc-nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.tgc-nav-menu a {
+  color: var(--color-cream);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.tgc-nav-menu a:hover { color: var(--color-gold); }
+
+.tgc-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 4, 38, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1050;
+}
+
+.tgc-nav-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}

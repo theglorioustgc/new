@@ -1,0 +1,23 @@
+.tgc-gallery-full { background: var(--color-white); min-height: 60vh; }
+
+/* Same grid and image shape as the homepage gallery */
+.tgc-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.tgc-gallery__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease;
+}
+
+.tgc-gallery__img:hover { transform: scale(1.03); }
+
+@media (max-width: 700px) {
+  .tgc-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+}

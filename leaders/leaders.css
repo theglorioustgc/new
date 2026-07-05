@@ -1,0 +1,42 @@
+/* ==========================================================================
+   CHURCH LEADERS STYLES
+   ========================================================================== */
+
+.tgc-leaders { background: var(--color-cream); }
+
+.tgc-leaders__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.tgc-leader-card {
+  text-align: center;
+  padding-bottom: var(--space-md);
+}
+
+.tgc-leader-card__photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.tgc-leader-card__name {
+  font-size: 1.05rem;
+  margin: var(--space-sm) var(--space-sm) 0.15rem;
+}
+
+.tgc-leader-card__role {
+  color: var(--color-gold-deep);
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin: 0 var(--space-sm);
+}
+
+@media (max-width: 900px) {
+  .tgc-leaders__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .tgc-leaders__grid { grid-template-columns: 1fr; }
+}

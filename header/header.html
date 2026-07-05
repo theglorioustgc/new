@@ -1,0 +1,51 @@
+<!-- ==========================================================================
+     HEADER PARTIAL
+     Appears on every page (index, live, contact). Loaded via fetch() and
+     inserted into <div id="header-placeholder"></div> by each page's script.
+     EDIT HERE: logo image src, "LIVE" link, nav menu items/labels.
+     ========================================================================== -->
+<header class="tgc-header" id="tgc-header">
+  <div class="tgc-header__inner">
+
+    <!-- Logo + Church Name (EDIT: swap assets/images/logo.png with your logo) -->
+    <a href="index.html" class="tgc-header__brand">
+      <img src="https://raw.githubusercontent.com/02thebook-bot/church/refs/heads/main/Screenshot%202026-06-30%20110810-Picsart-AiImageEnhancer.jpg" alt="The Glorious Church Logo" class="tgc-header__logo">
+      <span class="tgc-header__name">The Glorious Church</span>
+    </a>
+
+    <div class="tgc-header__right">
+
+      <!-- LIVE button with pulsing red dot -->
+      <a href="live.html" class="tgc-live-btn" aria-label="Go to Live page">
+        <span class="tgc-live-dot" aria-hidden="true"></span>
+        LIVE
+      </a>
+
+      <!-- Hamburger toggle -->
+      <button class="tgc-hamburger" id="tgc-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="tgc-nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Slide-in nav menu (EDIT: add/remove/rename links here) -->
+  <nav class="tgc-nav-menu" id="tgc-nav-menu" aria-hidden="true">
+    <ul>
+      <li><a href="index.html" data-scroll-to="hero">Home</a></li>
+      <li><a href="index.html" data-scroll-to="today-service">Today's Service</a></li>
+      <li><a href="index.html" data-scroll-to="devotional">Devotional</a></li>
+      <li><a href="testimonies.html">Testimonies</a></li>
+      <li><a href="index.html" data-scroll-to="leaders">Leaders</a></li>
+      <li><a href="index.html" data-scroll-to="gallery">Gallery</a></li>
+      <li><a href="index.html" data-scroll-to="donation">Donation</a></li>
+      <li><a href="index.html" data-scroll-to="partnership">Partnership</a></li>
+      <li><a href="index.html" data-scroll-to="tgc-man">The TGC Man</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Backdrop overlay for the open nav menu (click to close) -->
+  <div class="tgc-nav-backdrop" id="tgc-nav-backdrop"></div>
+</header>

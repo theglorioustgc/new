@@ -1,0 +1,58 @@
+/* ==========================================================================
+   DEVOTIONAL STYLES
+   ========================================================================== */
+
+.tgc-devotional {
+  background: var(--color-cream);
+}
+.tgc-devotional__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--color-gold-deep);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+  margin-top: -0.5rem;
+}
+
+.tgc-devotional__footnote {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.tgc-devotional__readmore {
+  display: inline-flex;
+  margin-top: 0.5rem;
+}
+
+.tgc-devotional__inner {
+  max-width: 760px;
+  text-align: center;
+}
+
+.tgc-devotional__image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover; /* fills container perfectly */
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-md);
+}
+
+.tgc-devotional__title {
+  font-size: 1.5rem;
+}
+
+.tgc-devotional__text {
+  color: var(--color-ink-soft);
+  text-align: left;
+  font-size: 1.02rem;
+}
+
+@media (max-width: 600px) {
+  .tgc-devotional__image { height: 220px; }
+}

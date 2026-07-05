@@ -1,0 +1,42 @@
+<!-- ==========================================================================
+     LIVE PAGE — main content (header/footer are loaded separately by
+     live.html via fetch()). EDIT HERE: real stream URLs (see comments),
+     audio/video labels.
+     ========================================================================== -->
+<main class="tgc-live-page">
+  <div class="section-container tgc-live-page__inner">
+    <span class="eyebrow">Live</span>
+    <h1>Join Us Live</h1>
+    <div class="gradient-divider" style="margin-left:0;"></div>
+    <p class="tgc-live-page__intro">
+      Can't make it in person? Tune in to our live audio or video stream below.
+    </p>
+
+    <div class="tgc-live-cards">
+
+      <!-- AUDIO CARD: EDIT href below with the real audio stream URL (e.g. Mixlr) -->
+      <a href="https://thegloriouschurch.mixlr.com/events/5131748" class="card tgc-live-card" target="_blank" rel="noopener">
+        <div class="tgc-live-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <span class="tgc-live-card__label"><!-- EDIT: audio label --> Listen to Audio Stream</span>
+      </a>
+
+      <!-- VIDEO CARD: EDIT href below with the real video stream URL (e.g. YouTube Live) -->
+      <a href="https://youtube.com/@hious_christian_center?si=DY1e0Y1odVjzufjM" class="card tgc-live-card" target="_blank" rel="noopener">
+        <div class="tgc-live-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M17 9.5L22 7v10l-5-2.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="tgc-live-card__label"><!-- EDIT: video label --> Watch Video Stream</span>
+      </a>
+
+    </div>
+  </div>
+</main>
